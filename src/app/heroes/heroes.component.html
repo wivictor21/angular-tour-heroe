@@ -1,1 +1,28 @@
-<h2>{{hero}}</h2>
+<h2>{{hero.name | uppercase}} Details</h2>
+<div><span>id: </span>{{hero.id}}</div>
+<div><span>name: </span>{{hero.name}}</div>
+<div><span>edad: </span>{{hero.edad}}</div>
+<div><span>nombre real: </span>{{hero.nombreReal}}</div>
+<div><span>nacionalidad: </span>{{hero.nacionalidad}}</div>
+<div><span>poderes: </span>{{hero.poderes}}</div>
+<div><span>creador: </span>{{hero.creador}}</div>
+<div>
+    <h2>Editar Heroe</h2>
+    <label for="name">Heroe name:</label>
+    <input id="name" [(ngModel)] = "hero.name" placeholder="name">
+    <br>
+    <label for="name">Heroe edad:</label>
+    <input id="name" [(ngModel)] = "hero.edad" placeholder="name">
+    <br>
+    <label for="name">Heroe nombre real:</label>
+    <input id="name" [(ngModel)] = "hero.nombreReal" placeholder="name">
+    <br>
+    <label for="name">Heroe nacionalidad:</label>
+    <input id="name" [(ngModel)] = "hero.nacionalidad" placeholder="name">
+    <br>
+    <label for="name">Heroe poderes:</label>
+    <input id="name" [(ngModel)] = "hero.poderes" placeholder="name">
+    <br>
+    <label for="name">Heroe creador:</label>
+    <input id="name" [(ngModel)] = "hero.creador" placeholder="name">
+</div>
