@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Hero } from 'src/hero';
+//import { Hero } from 'src/hero';
+import { HEROES } from '../mock-hero';
 
 @Component({
   selector: 'app-heroes',
@@ -7,7 +8,7 @@ import { Hero } from 'src/hero';
   styleUrls: ['./heroes.component.css']
 })
 export class HeroesComponent {
-  hero:Hero={
+  /*hero:Hero={
     id:1,
     name:'Superman',
     edad:30,
@@ -15,5 +16,8 @@ export class HeroesComponent {
     nacionalidad:'USA',
     poderes:'Súper fuerza, velocidad, resistencia, agilidad, reflejos, durabilidad, sentidos y longevidad.',
     creador:'Jerry Siegel'
-  }
+  }*/
+
+  heroes=HEROES
+
 }
