@@ -9,5 +9,5 @@ export const HEROES: Hero[] = [
     {id:17, name: 'Shazam', edad:13,nombreReal:'William Joseph',nacionalidad:'Estadounidense',poderes:'Fuersa, Volar, Rayos lacer',creador:'DC'},
     {id:18, name: 'Superman', edad:32,nombreReal:'Clark Kent',nacionalidad:'Estadounidense',poderes:'Fuersa, Volar, Rayos lacer',creador:'DC'},
     {id:19, name: 'Gatubela', edad:28,nombreReal:'Selina Kyle',nacionalidad:'Estadounidense',poderes:'Agilidad, robo, caracter',creador:'DC'},
-    {id:20, name: 'Supergirl', edad:19,nombreReal:'KAra Zor-El',nacionalidad:'Estadounidense',poderes:'Fuersa, Volar, Rayos lacer',creador:'DC'}
+    {id:20, name: 'Supergirl', edad:19,nombreReal:'Kara Zor-El',nacionalidad:'Estadounidense',poderes:'Fuersa, Volar, Rayos lacer',creador:'DC'}
 ];
