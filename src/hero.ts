@@ -6,4 +6,5 @@ export interface Hero{
     nacionalidad:string;
     poderes:string;
     creador:string;
+    imagen:string;
 }
