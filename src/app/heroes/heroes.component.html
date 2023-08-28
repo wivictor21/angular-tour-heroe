@@ -1,54 +1,22 @@
-<!--h2>{{hero.name | uppercase}} Details</h2>
-<div><span>id: </span>{{hero.id}}</div>
-<div><span>name: </span>{{hero.name}}</div>
-<div><span>edad: </span>{{hero.edad}}</div>
-<div><span>nombre real: </span>{{hero.nombreReal}}</div>
-<div><span>nacionalidad: </span>{{hero.nacionalidad}}</div>
-<div><span>poderes: </span>{{hero.poderes}}</div>
-<div><span>creador: </span>{{hero.creador}}</div>
-<div>
-    <h2>Editar Heroe</h2>
-    <label for="name">Heroe name:</label>
-    <input id="name" [(ngModel)] = "hero.name" placeholder="name">
-    <br>
-    <label for="name">Heroe edad:</label>
-    <input id="name" [(ngModel)] = "hero.edad" placeholder="name">
-    <br>
-    <label for="name">Heroe nombre real:</label>
-    <input id="name" [(ngModel)] = "hero.nombreReal" placeholder="name">
-    <br>
-    <label for="name">Heroe nacionalidad:</label>
-    <input id="name" [(ngModel)] = "hero.nacionalidad" placeholder="name">
-    <br>
-    <label for="name">Heroe poderes:</label>
-    <input id="name" [(ngModel)] = "hero.poderes" placeholder="name">
-    <br>
-    <label for="name">Heroe creador:</label>
-    <input id="name" [(ngModel)] = "hero.creador" placeholder="name">
-</div-->
-
-<h2>My Heroes</h2>
-
-<div class="grid-container">
+<h2>Mis Heroes por Victor Huertas</h2>
+<br>
+<br>
+<h3>Mis Heroes</h3>
+<div class="grid-container" (mouseout)="onMouseOut()">
     <div class="grid-item" *ngFor="let hero of heroes let i = index">
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 18rem;" (mousedown)="onMouseDown(hero)">
             <img class="card-img-top" src={{hero.imagen}} alt="Imagen de Heroes">
             <div class="card-body">
                 <h5 class="card-title">{{hero.name}}</h5>
-                <p class="card-text">{{hero.nombreReal}},
-                    {{hero.edad}},
-                    {{hero.nombreReal}},
-                    {{hero.nacionalidad}},
-                    {{hero.poderes}}
-                    <br>
-                    <a href="#" class="btn btn-primary">{{hero.creador}}</a>
             </div>
         </div>
     </div>
 </div>
-
+<br>
+<br>
+<h3>Tabla de todos los Heroes</h3>
 <table class="table table-striped table-dark">
-    <thead>
+    <thead (mouseup)="OnMouseUp()">
         <tr>
             <th>id</th>
             <th>Nombre</th>
@@ -60,7 +28,7 @@
         </tr>
     </thead>
     <tbody *ngFor="let hero of heroes">
-        <tr>
+        <tr (mousedown)="onMouseDown(hero)">
             <td>{{hero.id}}</td>
             <td>{{hero.name}}</td>
             <td>{{hero.edad}}</td>
@@ -71,10 +39,12 @@
         </tr>
     </tbody>
 </table>
-
+<br>
+<br>
+<h3>Lista de todos los heroes</h3>
 <ul class="heroes">
     <li *ngFor="let hero of heroes">
-        <button type="button">
+        <button type="button" (click)="onSelect(hero)">
             <span class="badge">id: {{hero.id}}</span>
             <br>
             <span class="name">Nombre: {{hero.name}}</span>
@@ -91,3 +61,42 @@
         </button>
     </li>
 </ul>
+<br>
+<br>
+<h2>DETALLES Y EDITOR DE HEROES</h2>
+<div *ngFor="let hero of heroes">
+    <br>
+    <h2>{{hero.name | uppercase}} Details</h2>
+    <div><span>id: </span>{{hero.id}}</div>
+    <div><span>name: </span>{{hero.name}}</div>
+    <div><span>edad: </span>{{hero.edad}}</div>
+    <div><span>nombre real: </span>{{hero.nombreReal}}</div>
+    <div><span>nacionalidad: </span>{{hero.nacionalidad}}</div>
+    <div><span>poderes: </span>{{hero.poderes}}</div>
+    <div><span>creador: </span>{{hero.creador}}</div>
+    <br>
+    <div>
+        <h2>Editar Heroe</h2>
+        <label for="name">Heroe name: |</label>
+        <input id="name" [(ngModel)]="hero.name" placeholder="name">
+        <br>
+        <label for="name">Heroe edad: |</label>
+        <input id="name" [(ngModel)]="hero.edad" placeholder="name">
+        <br>
+        <label for="name">Heroe nombre real: |</label>
+        <input id="name" [(ngModel)]="hero.nombreReal" placeholder="name">
+        <br>
+        <label for="name">Heroe nacionalidad: |</label>
+        <input id="name" [(ngModel)]="hero.nacionalidad" placeholder="name">
+        <br>
+        <label for="name">Heroe poderes: |</label>
+        <input id="name" [(ngModel)]="hero.poderes" placeholder="name">
+        <br>
+        <label for="name">Heroe creador: |</label>
+        <input id="name" [(ngModel)]="hero.creador" placeholder="name">
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
